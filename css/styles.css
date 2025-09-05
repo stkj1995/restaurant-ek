@@ -9,23 +9,26 @@
 body {
 font-family: var(--fontMain);
 
-  > header,
+  > header {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: var(--colourBgBlue);
+    background-color: var(--colourBgBeige);
+    font-family: var(--fontTitle);
+  }
+
   > footer {
     padding: 0.5rem 1rem;
     text-align: center;
-    color: var(--colourBgComplementary);
-    background-color: var(--colourBgSection);
-  }
-
-  > header {
+    color: var(--colourBgBlue);
+    background-color: var(--colourBgDarkBeige);
     font-family: var(--fontTitle);
   }
 }
 
-
 nav {
-  background-color: var(--colourBgNav);
-  border-bottom: thick solid var(--colourBgSection);
+  background-color: var(--colourBgDarkBeige);
+  border-bottom: thick solid var(--colourBgBeige);
 
   > ul {
     display: flex;
@@ -41,15 +44,19 @@ nav {
     }
 
     > li:not(:first-child) {
-      border-top: 0.2rem solid var(--colourBgComplementary); 
+      border-top: 0.2rem solid var(--colourBgBlue); 
     }
 
     > li > a {
       font-weight: bold;
       text-decoration: none;
-      color: var(--colourBgComplementary);
+      color: var(--colourBgBlue);
       display: block;
       padding: 1rem;
+
+      &:hover {
+        color:var(--colourBgRed);
+      }
     }
   }
 }
@@ -59,44 +66,43 @@ nav {
   justify-content: center;
   margin: 0;
 
-  > img {
-  border-radius: 0.8rem;
-  height: auto;
-  width: auto;
-}
+    > img {
+    border-radius: 0.8rem;
+    height: auto;
+    width: auto;
+  }
 }
 
 main {
   padding: 0.5rem 1rem;
 
-     > header {
-        background-color: var(--colourBgMain);
-        color: var(--colourBgTxt);
-    }  
+    > header {
+      background-color: var(--colourBgWhite);
+      color: var(--colourBgRed);
+  }  
    
 }
 
 button {
   color: var(--colourBgMain);
-  background-color: var(--colourBgTxt); 
+  background-color: var(--colourBgRed); 
   border-radius: 2.5rem;
 }
 
 #list {
-    background-color: var(--colourBgMain);
-    color: var(--colourBgTxt);
-}
+  background-color: var(--colourBgWhite);
+  color: var(--colourBgRed);
 
-#list p {
+  p {
     margin: 0.25rem 0;  
+  }
 }
 
 #testimonial {
-    background-color: var(--colourBgTestimonial);
+    background-color: var(--colourBgGray);
     color: var(--colourBgBlack);
     border-radius: 0.8rem;
 } 
-
 
 @media (min-width: 768px) {
   nav > ul {
@@ -117,5 +123,4 @@ button {
   #image img {
     max-width: 400px; 
   }
-
 }
