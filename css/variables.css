@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Poppins&display=swap');
 
 :root {
-  --colourBgMain: #f6f1d1;
+  --colourBgMain: white;
   --colourBgNav: #ddca7d;
   --colourBgComplementary: #0a369d;
-  --colourBgText: #dc2f02;
+  --colourBgTxt: #dc2f02;
+  --colourBgSection: #f6f1d1;
+  --colourBgTestimonial: #d3d3d3;
+  --colourBgBlack: #000;
 
   --fontTitle: 'Lexend Zetta', sans-serif;
   --fontMain: 'Poppins', sans-serif;
+  --fontTxt: 'Poppins', sans-serif;
 }

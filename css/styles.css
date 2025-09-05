@@ -1,10 +1,5 @@
 @import "variables.css";
 
-/* :root {
-  --colourBgMain: #414833;
-  --colourBgComplementary: floralwhite;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +14,7 @@ font-family: var(--fontMain);
     padding: 0.5rem 1rem;
     text-align: center;
     color: var(--colourBgComplementary);
-    background-color: var(--colourBgMain);
+    background-color: var(--colourBgSection);
   }
 
   > header {
@@ -29,14 +24,13 @@ font-family: var(--fontMain);
 
 nav {
   background-color: var(--colourBgNav);
-   border-bottom: thick solid var(--colourBgMain);
+   border: thick solid var(--colourBgSection);
     > ul {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     gap: 1rem;
 
-  
     list-style-type: none;
 
     > li > a {
@@ -49,10 +43,31 @@ nav {
 
 main {
   padding: 0.5rem 1rem;
+
+     > header {
+        background-color: var(--colourBgMain);
+        color: var(--colourBgTxt);
+    }  
+   
 }
 
 button {
-  color: var(--colourBgComplementary);
-  background-color: var(--colourBgMain); 
-  border: none;
+  color: var(--colourBgMain);
+  background-color: var(--colourBgTxt); 
+  border-radius: 2.5rem;
 }
+
+#list {
+    background-color: var(--colourBgMain);
+    color: var(--colourBgTxt);
+}
+
+#list p {
+    margin: 0.25rem 0;  /* lidt luft mellem linjerne */
+}
+
+#testimonial {
+    background-color: var(--colourBgTestimonial);
+    color: var(--colourBgBlack);
+    border-radius: 0.8rem;
+} 
