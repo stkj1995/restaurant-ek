@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Food Repo</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/form.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Food Repo</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li> <a href="index.html">Homepage</a></li>
+            <li> <a href="contact.html">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <header>
+                <h2>Contact</h2>
+            </header>
+
+            <section>
+                <header>
+                    <h3>Food Repo Inc.</h3>
+                </header>
+                <address>
+                    <div id="postal-address">
+                        <p>Guldbergsgade 29N</p>
+                        <p>2200 Copenhagen</p>
+                    </div>
+                    <div>
+                        <p>Phone number: <a href="tel:(+45)46 46 00 00" title="Call us on the phone">(+45) 46 46 00
+                                00</a>
+                        </p>
+                        <p>E-mail: <a href="mailto:info@foodrepo.dk" title="Write us a message">info@foodrepo.dk</p></a>
+                    </div>
+                </address>
+            </section>
+
+            <section>
+                <section class="content">
+                    <header>
+                        <h3>Contact us</h3>
+                    </header>
+                    <form id="frmContact">
+                        <div>
+                            <label for="txtFullName">Full name</label>
+                            <input type="text" id="txtFullName">
+                        </div>
+                        <div>
+                            <label for="txtEmail">E-mail</label>
+                            <input type="text" id="txtEmail">
+                        </div>
+                        <div>
+                            <label for="txtPhoneNumber">Phone number</label>
+                            <input type="tel:(+45) 46 46 00 00" id="txtPhoneNumber" pattern=">\d{8}">
+                        </div>
+                        <div>
+                            <label for="txtComments">Comments</label>
+                            <textarea id="txtComments"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EK Web Development</p>
+    </footer>
+
+    <dialog id="mdlContact">
+        <header>
+            <h1>Message received</h1>
+            <button class="close">&times;</button>
+        </header>
+        <p>Thank you for your message.</p>
+        <p>Full name: <span id="form-full-name"></span></p>
+        <p>E-mail: <span id="form-email"></span></p>
+        <p>Phone number: <span id="form-phone-number"></span></p>
+        <p>Comments: <span id="form-comments"></span></p>
+    </dialog>
+</body>
+
+</html>

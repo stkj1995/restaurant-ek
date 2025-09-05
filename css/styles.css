@@ -1,0 +1,58 @@
+@import "variables.css";
+
+/* :root {
+  --colourBgMain: #414833;
+  --colourBgComplementary: floralwhite;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+font-family: var(--fontMain);
+
+  > header,
+  > footer {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: var(--colourBgComplementary);
+    background-color: var(--colourBgMain);
+  }
+
+  > header {
+    font-family: var(--fontTitle);
+  }
+}
+
+nav {
+  background-color: var(--colourBgNav);
+   border-bottom: thick solid var(--colourBgMain);
+    > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1rem;
+
+  
+    list-style-type: none;
+
+    > li > a {
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--colourBgComplementary);
+    }
+  }
+}
+
+main {
+  padding: 0.5rem 1rem;
+}
+
+button {
+  color: var(--colourBgComplementary);
+  background-color: var(--colourBgMain); 
+  border: none;
+}
