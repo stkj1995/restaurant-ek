@@ -54,6 +54,17 @@ nav {
   }
 }
 
+#image {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+  > img {
+  border-radius: 0.8rem;
+  height: auto;
+  width: auto;
+}
+}
 
 main {
   padding: 0.5rem 1rem;
@@ -77,7 +88,7 @@ button {
 }
 
 #list p {
-    margin: 0.25rem 0;  /* lidt luft mellem linjerne */
+    margin: 0.25rem 0;  
 }
 
 #testimonial {
@@ -85,6 +96,7 @@ button {
     color: var(--colourBgBlack);
     border-radius: 0.8rem;
 } 
+
 
 @media (min-width: 768px) {
   nav > ul {
@@ -95,6 +107,15 @@ button {
   }
 
   nav > ul > li {
-    border: none !important; /* fjern alle linjer her */
+    border: none !important; 
   }
+
+  #image {
+    justify-content: flex-end; 
+  }
+
+  #image img {
+    max-width: 400px; 
+  }
+
 }
