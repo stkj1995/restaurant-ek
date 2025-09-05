@@ -24,14 +24,17 @@ font-family: var(--fontMain);
 
 nav {
   background-color: var(--colourBgNav);
-   border: thick solid var(--colourBgSection);
+   border-bottom: thick solid var(--colourBgSection);
     > ul {
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 
     list-style-type: none;
+    margin: 0;
+    padding: 1rem;
 
     > li > a {
       font-weight: bold;
@@ -71,3 +74,11 @@ button {
     color: var(--colourBgBlack);
     border-radius: 0.8rem;
 } 
+
+@media (min-width: 800px) {
+    nav > ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
