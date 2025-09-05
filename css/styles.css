@@ -22,27 +22,38 @@ font-family: var(--fontMain);
   }
 }
 
+
 nav {
   background-color: var(--colourBgNav);
-   border-bottom: thick solid var(--colourBgSection);
-    > ul {
+  border-bottom: thick solid var(--colourBgSection);
+
+  > ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
+    align-items: stretch; 
     list-style-type: none;
     margin: 0;
-    padding: 1rem;
+    padding: 0;
+
+    > li {
+      text-align: center;
+    }
+
+    > li:not(:first-child) {
+      border-top: 0.2rem solid var(--colourBgComplementary); 
+    }
 
     > li > a {
       font-weight: bold;
       text-decoration: none;
       color: var(--colourBgComplementary);
+      display: block;
+      padding: 1rem;
     }
   }
 }
+
 
 main {
   padding: 0.5rem 1rem;
@@ -75,10 +86,15 @@ button {
     border-radius: 0.8rem;
 } 
 
-@media (min-width: 800px) {
-    nav > ul {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+@media (min-width: 768px) {
+  nav > ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  nav > ul > li {
+    border: none !important; /* fjern alle linjer her */
+  }
 }
