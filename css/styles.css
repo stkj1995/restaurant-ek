@@ -69,7 +69,7 @@ nav {
     > img {
     border-radius: 0.8rem;
     height: auto;
-    width: auto;
+    width: 90%;
   }
 }
 
@@ -99,9 +99,15 @@ button {
 }
 
 #testimonial {
-    background-color: var(--colourBgGray);
-    color: var(--colourBgBlack);
-    border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  text-align: left;
+  background-color: var(--colourBgGray);
+  color: var(--colourBgBlack);
+  border-radius: 0.8rem;
 } 
 
 @media (min-width: 768px) {
