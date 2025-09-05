@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu - Restaurant EK</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Menu | Restaurant EK</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <script src="js/script.js" type="module"></script>
 </head>
+
 <body>
   <header>
     <h1>Restaurant EK</h1>
@@ -20,28 +23,36 @@
 
   <main>
     <section id="menu">
-      <article>
+      <div class="cards"></div>
+      <article class="menu-card">
+        <img src="assets\img\salad.jpg" alt="salad">
         <h2>Turing Salad</h2>
-        <p>Sun-dried tomatos and feta cheese on top of a thin layer of lettuce. Choose between our balsamic, mustard or barbecue dressing.</p>
-        <p>75 kr.</p>
+        <p>Sun-dried tomatos and feta cheese on top of a thin layer of lettuce. Choose between our balsamic, mustard or
+          barbecue dressing.</p>
+        <button type="submit" id="price-salad">75 kr.</button>
       </article>
 
-      <article>
+      <article class="menu-card">
+        <img src="assets\img\pizza.jpg" alt="pizza">
         <h2>Pizza Berners-Lee</h2>
         <p>Tomato, mozzarella, pepperoni and rucula. Choose between our thin or thick bread base.</p>
-        <p>80 kr.</p>
+        <button type="submit" id="price-pizza">80 kr.</button>
       </article>
 
-      <article>
+      <article class="menu-card">
+        <img src="assets\img\burger.jpg" alt="burger">
         <h2>Codd Hamburger</h2>
-        <p>High quality meat, lettuce, tomato, onion, bacon, cheese, jalape os and a lot of love. Which sauce do you prefer: BBQ, Dijon or mayonaisse? It comes with French fries and coleslaw salad.</p>
-        <p>115 kr.</p>
+        <p>High quality meat, lettuce, tomato, onion, bacon, cheese, jalape os and a lot of love. Which sauce do you
+          prefer: BBQ, Dijon or mayonaisse? It comes with French fries and coleslaw salad.</p>
+        <button type="submit" id="price-burger">115 kr.</button>
       </article>
 
-      <article>
+      <article class="menu-card">
+        <img src="assets\img\ek_restaurant.jpg" alt="dessert">
         <h2>Cerf Cream</h2>
-        <p>Delightful strawberry icecream topped with actual strawberries. In cone or vase. Multiple toppings available.</p>
-        <p>65 kr.</p>
+        <p>Delightful strawberry icecream topped with actual strawberries. In cone or vase. Multiple toppings available.
+        </p>
+        <button type="submit" id="price-dessert">65 kr.</button>
       </article>
     </section>
   </main>
@@ -50,4 +61,5 @@
     <p>&copy; 2025 Restaurant EK</p>
   </footer>
 </body>
+
 </html>

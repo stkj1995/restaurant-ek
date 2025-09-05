@@ -1,2 +1,70 @@
+@import 'variables.css';
 @import 'styles.css';
 
+body {
+  font-family: var(--fontMain);
+  color: var(--colourText);
+  background-color: var(--colourBg);
+}
+
+#menu {
+    padding: 2rem 5rem;
+    text-align: left;
+    background-color: white;
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .menu-card {
+        background-color: var(--colourBgBeige);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        width: 100%;
+        max-width: 320px;
+        text-align: left;
+        padding: 1rem 1rem;
+        margin: 1rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.8rem;
+    }
+
+    h2 {
+        margin: 1rem 0 0.5rem;
+        font-family: var(--fontMain);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--colourBgBlue);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    p {
+        font-size: 0.95rem;
+        margin: 1rem;
+        line-height: 1.4;
+    }
+
+    button {
+        cursor:pointer;
+        font-weight: bold;
+        color: var(--colourBgWhite);
+        padding: 0.5rem 2rem;
+        border: 0.3rem solid var(--colourBgDarkBeige);
+        border-radius: 0.2rem;
+        border-color: var(--colourBgDarkBeige);
+    
+
+        &:hover {
+            background-color: var(--colourBgBlack);
+        }
+    }
+}
