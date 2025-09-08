@@ -96,6 +96,11 @@ address {
                 background-color: var(--colourBgBlue);
             }
         }
+
+        .person-label {
+            max-width: 12%;
+            width: fit-content;
+        }        
     }
 }
 
