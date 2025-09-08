@@ -128,12 +128,12 @@ button {
 
 
 /* desktop */
-
 @media (min-width: 768px) {
   nav > ul {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 2rem;
   }
 
@@ -142,6 +142,7 @@ button {
   }
 
   #image {
+    display: flex;
     justify-content: flex-end; 
   }
 
