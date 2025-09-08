@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+
+/* mobile first */
+
 body {
 font-family: var(--fontMain);
 
@@ -117,6 +120,14 @@ button {
   border-radius: 0.8rem;
   margin-bottom: 1rem;
 } 
+
+/* tablet */
+
+
+
+
+
+/* desktop */
 
 @media (min-width: 768px) {
   nav > ul {
