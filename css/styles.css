@@ -66,6 +66,11 @@ nav {
   }
 }
 
+#image,
+#about {
+  display: block;
+}
+
 #image {
   display: flex;
   justify-content: center;
@@ -121,6 +126,8 @@ button {
   margin-bottom: 1rem;
 } 
 
+
+
 /* tablet */
 
 
@@ -164,21 +171,40 @@ button {
   main {
     margin-left: 12rem;
     margin-right: 12rem;
-    padding: 2rem;
+  }
+  
+  .about-sections {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 
-    .about {
-      border: 1rem;
-    }
+  #about {
+    order: 1;
+    flex: 1;
   }
 
   #image {
+    order: 2;
     display: flex;
     justify-content: flex-end;
   }
 
   #image img {
     max-width: 400px;
-    margin-right: 14rem;
+    width: 100%;
+    height: auto;
   }
+
+  #list {
+    margin: 0rem;
+    padding: 0;
+  }
+
+  #testimonial {
+    margin-bottom: 12rem;
+  }
+
 }
 
