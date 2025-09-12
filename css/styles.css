@@ -166,24 +166,24 @@ button {
 
   .about-sections {
     display: flex;
-    flex-direction: row-reverse; /* text on left, image on right */
+    flex-direction: row-reverse;
     align-items: flex-start; 
-    gap: 1rem; /* space between text and image */
+    gap: 1rem;
   }
 
   #about {
-    flex: 1; /* now text takes twice the space of image */
-    min-width: 300px; /* optional: prevent text from shrinking too much */
+    flex: 1;
+    min-width: 300px;
   }
 
   #image {
-    flex: 1; /* image takes less space */
+    flex: 1;
     display: flex;
     justify-content: flex-end; 
   }
 
   #image img {
-    max-width: 800px; /* limit image size */
+    max-width: 800px;
     width: 100%;
     height: auto;
     border-radius: 0.8rem;
@@ -242,18 +242,17 @@ button {
   }
 
   main {
-    margin: 0 auto; /* centers content */
-    max-width: 1300px; /* optional limit */
-    padding: 0 1rem; /* keep some breathing room */
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 1rem;
   }
   
   .about-sections {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: clamp(1rem, 3vw, 2rem); /* scales between 1rem and 2rem */
+    gap: clamp(1rem, 3vw, 2rem);
   }
-
 
   #about {
     flex: 3;
