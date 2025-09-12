@@ -14,7 +14,7 @@ font-family: var(--fontMain);
 
   > header {
     padding: 0.5rem 1rem;
-    text-align: center;
+    text-align: left;
     color: var(--colourBgBlue);
     background-color: var(--colourBgBeige);
     font-family: var(--fontTitle);
@@ -91,7 +91,6 @@ main {
       background-color: var(--colourBgWhite);
       color: var(--colourBgRed);
   }  
-   
 }
 
 button {
@@ -118,7 +117,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   text-align: left;
   background-color: var(--colourBgGray);
   color: var(--colourBgBlack);
@@ -126,17 +125,91 @@ button {
   margin-bottom: 1rem;
 } 
 
-
-
 /* tablet */
 
+@media (min-width: 700px) and (max-width: 1023px) {
+   body {
+    display: flex; 
+    flex-direction: column;
 
+    > header {
+      padding: 0.5rem 1.5rem;
+      text-align: left;
+    }
+  }
 
+  nav {
+    display: flex; 
+    justify-content: flex-start;
+    background-color: var(--colourBgDarkBeige);
+    padding: 0.5rem 0.5rem;
+    font-size: 1.2rem;
+  }
 
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.8rem;
+  }
+
+  nav > ul > li {
+    border-top: none !important;
+  }
+
+  main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .about-sections {
+    display: flex;
+    flex-direction: row-reverse; /* text on left, image on right */
+    align-items: flex-start; 
+    gap: 1rem; /* space between text and image */
+  }
+
+  #about {
+    flex: 1; /* now text takes twice the space of image */
+    min-width: 300px; /* optional: prevent text from shrinking too much */
+  }
+
+  #image {
+    flex: 1; /* image takes less space */
+    display: flex;
+    justify-content: flex-end; 
+  }
+
+  #image img {
+    max-width: 800px; /* limit image size */
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+  }
+
+  #list {
+    line-height: 1rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  #testimonial {
+    margin-bottom: 6rem;
+
+    p {
+      text-align: left;
+      align-self: flex-start;
+      margin-left: 1rem;
+      padding-top: 0.5rem;
+    }
+  }
+}
 
 /* desktop */
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   body {
     display: flex; 
     flex-direction: column;
@@ -169,42 +242,52 @@ button {
   }
 
   main {
-    margin-left: 12rem;
-    margin-right: 12rem;
+    margin: 0 auto; /* centers content */
+    max-width: 1300px; /* optional limit */
+    padding: 0 1rem; /* keep some breathing room */
   }
   
   .about-sections {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem); /* scales between 1rem and 2rem */
   }
 
+
   #about {
+    flex: 3;
     order: 1;
-    flex: 1;
   }
 
   #image {
     order: 2;
+    flex: 2;
     display: flex;
     justify-content: flex-end;
   }
 
   #image img {
-    max-width: 400px;
     width: 100%;
+    max-width: 500px;
     height: auto;
+    border-radius: 0.8rem;
   }
 
   #list {
-    margin: 0rem;
-    padding: 0;
+    line-height: 0.8rem;
+    margin-top: -10rem;
   }
 
   #testimonial {
-    margin-bottom: 12rem;
-  }
+    margin-bottom: 18rem;
 
+    p {
+      text-align: left;
+      align-self: flex-start;
+      margin-left: 2rem;
+      padding-top: 0.5rem;
+    }
+  }
 }
 
