@@ -173,7 +173,7 @@ button {
 
   #about {
     flex: 1;
-    min-width: 300px;
+    min-width: 19rem;
   }
 
   #image {
@@ -183,7 +183,7 @@ button {
   }
 
   #image img {
-    max-width: 800px;
+    max-width: 50rem;
     width: 100%;
     height: auto;
     border-radius: 0.8rem;
@@ -243,7 +243,7 @@ button {
 
   main {
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 81rem;
     padding: 0 1rem;
   }
   
@@ -268,7 +268,7 @@ button {
 
   #image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 31rem;
     height: auto;
     border-radius: 0.8rem;
   }

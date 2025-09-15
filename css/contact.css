@@ -51,7 +51,7 @@ address {
     border: 0.1rem solid var(--colourBgBlack);
     border-radius: 0.8rem;
     padding: 2rem 1.5rem 1rem;
-    max-width: 500px;
+    max-width: 31rem;
     display: block;
 
     h2 {
@@ -105,7 +105,7 @@ address {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.5rem;
-    max-width: 900px;
+    max-width: 56rem;
     margin: 0 auto;
     align-items: flex-start;
   }
@@ -170,7 +170,7 @@ address {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto; 
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
     align-items: start;
   }

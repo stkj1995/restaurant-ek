@@ -81,7 +81,7 @@ body {
     .cards {
       display: grid;
       grid-template-columns: 1fr;
-      max-width: 1000px;
+      max-width: 62rem;
       margin: 0 auto;
     }
 
@@ -132,7 +132,7 @@ body {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
-      max-width: 1200px;
+      max-width: 75rem;
       margin: 0 auto;
       padding: 2rem;
     }
