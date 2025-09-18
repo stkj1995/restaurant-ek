@@ -1,25 +1,34 @@
-document.querySelector('#frmContact').addEventListener('submit', (e) => {
-    e.preventDefault();
+const form = document.getElementById("cdForm");
+const tableBody = document.querySelector("#cdTable tbody");
 
-    const fullName = e.target.txtFullName.value;
-    const email = e.target.txtEmail.value;
-    const phoneNumber = e.target.txtPhoneNumber.value;
-    const comments = e.target.txtComments.value;
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
 
-    const dialog = document.querySelector('#mdlContact')
+  // hent input-værdier
+  const author = document.getElementById("author").value;
+  const title = document.getElementById("title").value;
+  const year = document.getElementById("year").value;
 
-    dialog.querySelector('#form-full-name').innerText = fullName;
-    dialog.querySelector('#form-email').innerText = email;
-    dialog.querySelector('#form-phone-number').innerText = phoneNumber;
-    dialog.querySelector('#form-comments').innerText = comments;
+  // lav ny række
+  const row = document.createElement("tr");
 
-    dialog.showModal();
+  row.innerHTML = `
+    <td>${author}</td>
+    <td>${title}</td>
+    <td>${year}</td>
+    <td><button class="delete">🗑️</button></td>
+  `;
 
-    e.target.reset();
+  // tilføj til tabellen
+  tableBody.appendChild(row);
 
-    dialog.querySelector('button.close').addEventListener('click', (e) => {
-        e.preventDefault();
+  // nulstil inputs
+  form.reset();
+});
 
-        dialog.close();
-    })
+// lyt på alle delete-knapper
+tableBody.addEventListener("click", function(event) {
+  if (event.target.classList.contains("delete")) {
+    event.target.closest("tr").remove();
+  }
 });

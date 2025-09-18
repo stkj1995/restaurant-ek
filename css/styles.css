@@ -6,288 +6,75 @@
   box-sizing: border-box;
 }
 
-
-/* mobile first */
-
-body {
-font-family: var(--fontMain);
-
-  > header {
-    padding: 0.5rem 1rem;
-    text-align: left;
-    color: var(--colourBgBlue);
-    background-color: var(--colourBgBeige);
-    font-family: var(--fontTitle);
-  }
-
-  > footer {
-    padding: 0.5rem 1rem;
-    text-align: center;
-    color: var(--colourBgBlue);
-    background-color: var(--colourBgDarkBeige);
-    font-family: var(--fontTitle);
-  }
+/* music cd app */
+#cdApp {
+  background-color: var(--colourBgWhite);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
 }
 
-nav {
-  background-color: var(--colourBgDarkBeige);
-  border-bottom: thick solid var(--colourBgBeige);
-
-  > ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch; 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    > li {
-      text-align: center;
-    }
-
-    > li:not(:first-child) {
-      border-top: 0.15rem solid var(--colourBgBlue); 
-      width: 85%;
-      margin: 0 auto;
-    }
-
-    > li > a {
-      font-weight: bold;
-      text-decoration: none;
-      color: var(--colourBgBlue);
-      display: block;
-      padding: 1rem;
-
-      &:hover {
-        color:var(--colourBgRed);
-      }
-    }
-  }
+/* formular */
+#cdForm {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
 }
 
-#image,
-#about {
-  display: block;
+#cdForm label {
+  font-weight: bold;
+  align-self: center;
 }
 
-#image {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 1rem;
-
-    > img {
-    border-radius: 0.8rem;
-    height: auto;
-    width: 90%;
-  }
+#cdForm input {
+  padding: 0.3rem;
+  border: 1px solid var(--colourBgGray);
+  border-radius: 0.3rem;
 }
 
-main {
+#cdForm button {
+  grid-column: span 2;
   padding: 0.5rem 1rem;
-
-    > header {
-      background-color: var(--colourBgWhite);
-      color: var(--colourBgRed);
-  }  
+  background-color: var(--colourBgBlue);
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+#cdForm button:hover {
+  background-color: var(--colourBgRed);
 }
 
-button {
-  color: var(--colourBgMain);
-  background-color: var(--colourBgRed); 
-  border-radius: 2.5rem;
+/* tabel */
+#cdTable {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-#about {
+#cdTable th {
+  background-color: var(--colourBgBlue);
+  color: white;
+  text-align: left;
   padding: 0.5rem;
 }
 
-#list {
-  background-color: var(--colourBgWhite);
+#cdTable td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--colourBgGray);
+}
+
+#cdTable td:last-child {
+  text-align: center;
+}
+
+/* delete */
+.delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.delete:hover {
   color: var(--colourBgRed);
-
-  p {
-    margin: 1rem 1.2rem 1rem;  
-    font-weight: bold;
-  }
 }
-
-#testimonial {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 1rem;
-  text-align: left;
-  background-color: var(--colourBgGray);
-  color: var(--colourBgBlack);
-  border-radius: 0.8rem;
-  margin-bottom: 1rem;
-} 
-
-/* tablet */
-
-@media (min-width: 700px) and (max-width: 1023px) {
-   body {
-    display: flex; 
-    flex-direction: column;
-
-    > header {
-      padding: 0.5rem 1.5rem;
-      text-align: left;
-    }
-  }
-
-  nav {
-    display: flex; 
-    justify-content: flex-start;
-    background-color: var(--colourBgDarkBeige);
-    padding: 0.5rem 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  nav > ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 0.8rem;
-  }
-
-  nav > ul > li {
-    border-top: none !important;
-  }
-
-  main {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .about-sections {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start; 
-    gap: 1rem;
-  }
-
-  #about {
-    flex: 1;
-    min-width: 19rem;
-  }
-
-  #image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; 
-  }
-
-  #image img {
-    max-width: 50rem;
-    width: 100%;
-    height: auto;
-    border-radius: 0.8rem;
-  }
-
-  #list {
-    line-height: 1rem;
-    margin-top: 2rem;
-    text-align: left;
-  }
-
-  #testimonial {
-    margin-bottom: 6rem;
-
-    p {
-      text-align: left;
-      align-self: flex-start;
-      margin-left: 1rem;
-      padding-top: 0.5rem;
-    }
-  }
-}
-
-/* desktop */
-
-@media (min-width: 1024px) {
-  body {
-    display: flex; 
-    flex-direction: column;
-
-      > header {
-      padding: 0.5rem 1.5rem;
-      text-align: left;
-    }
-  }
-
- nav {
-    display: flex; 
-    justify-content: flex-start;
-    background-color: var(--colourBgDarkBeige);
-    padding: 0.5rem 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  nav > ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 0.8rem;
-  }
-
-  nav > ul > li {
-   border-top: none !important;
-  }
-
-  main {
-    margin: 0 auto;
-    max-width: 81rem;
-    padding: 0 1rem;
-  }
-  
-  .about-sections {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: clamp(1rem, 3vw, 2rem);
-  }
-
-  #about {
-    flex: 3;
-    order: 1;
-  }
-
-  #image {
-    order: 2;
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  #image img {
-    width: 100%;
-    max-width: 31rem;
-    height: auto;
-    border-radius: 0.8rem;
-  }
-
-  #list {
-    line-height: 0.8rem;
-    margin-top: -10rem;
-  }
-
-  #testimonial {
-    margin-bottom: 18rem;
-
-    p {
-      text-align: left;
-      align-self: flex-start;
-      margin-left: 2rem;
-      padding-top: 0.5rem;
-    }
-  }
-}
-

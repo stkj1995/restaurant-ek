@@ -11,56 +11,51 @@
 
 <body>
     <header>
-        <h1>Restaurant EK</h1>
+        <h1>Music CDs</h1>
     </header>
 
-    <nav>
+    <!-- <nav>
         <ul>
             <li> <a href="index.html">Home</a></li>
-            <li> <a href="menu.html">Menu</a></li>
-            <li> <a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <main>
-        <div class="about-sections">
-            <section id="image">
-                <img src="assets/img/ek_restaurant.jpg" alt="Restaurant EK bar">
-            </section>
-            <section id="about">
-                <header>
-                    <p>We provide a wide variety of fine dishes and beverages at moderate prices. Located in one of the
-                        trendiest areas of Copenhagen, Restaurant EK has been at the forefront of Denmark's culinary
-                        life
-                        for the past decade. Let us take you on a journey of taste that you will never forget. You will
-                        not
-                        only not regret it, but you will feel an urge to spread the good news around to your friends and
-                        family. So amazing is the food experience at Restaurant EK. We look forward to serving you.</p>
-                </header>
-            </section>
-        </div>
-        <section id="list">
-            <header>
-                <p>High quality food</p>
-                <p>Excellent location</p>
-                <p>Attentive personnel</p>
-                <p>Wonderful music</p>
-                <p>Amazing wines</p>
-                <p>Reasonable prices</p>
-            </header>
-        </section>
-        <section id="testimonial">
-            <blockquote>
-                Dining at Restaurant EK has truly been one of the greatest experiences of my life. Words cannot express
-                the pleasure that I felt while tasting these amazing flavours. It makes all other restaurants pale in
-                comparison, in Denmark and elsewhere.
-            </blockquote>
-            <p>- Mette J. Christensen, <em>The Food Connoisseur</em></p>
+        <section id="cdApp">
+            <h2>Music CDs</h2>
+
+            <form id="cdForm">
+                <label for="author">Author</label>
+                <input type="text" id="author" required>
+
+                <label for="title">Title</label>
+                <input type="text" id="title" required>
+
+                <label for="year">Year</label>
+                <input type="number" id="year" required>
+
+                <button type="submit">Add</button>
+            </form>
+
+            <!-- Tabel -->
+            <table id="cdTable">
+                <thead>
+                    <tr>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rækker kommer her via JS -->
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2021-2025 EK Web Development - CSS Restaurant Assignment</p>
+        <p>&copy; 2021-2025 EK Web Development - Music CDs assignment</p>
     </footer>
 </body>
 
